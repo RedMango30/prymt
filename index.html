@@ -1,264 +1,377 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="ltr" lang="en-US">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Prymt DRLs – Cyberpunk-inspired motorcycle lighting, designed for riders who lead, not follow. See our showcase of futuristic DRLs and real-world installations." />
-  <meta name="keywords" content="Prymt, DRL, motorcycle lights, cyberpunk, bike lighting, LED DRLs, installation showcase, Philippines" />
-  <meta name="author" content="Prymt PH" />
-  <title>Prymt DRL – Cyberpunk Company Page</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet"/>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Orbitron', sans-serif;
-      background-color: #000;
-      color: #fff;
-      overflow-x: hidden;
-    }
-    section:nth-of-type(odd) {
-      background-color: #fff;
-      color: #000;
-    }
-    section:nth-of-type(even) {
-      background-color: #000;
-      color: #fff;
-    }
-    .section-divider {
-      background: url('image1.png') center center no-repeat;
-      background-size: cover;
-      height: 120px;
-      width: 100%;
-    }
 
-    .section-divider1 {
-      background: url('image2.png') center center no-repeat;
-      background-size: cover;
-      height: 120px;
-      width: 100%;
-    }
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: rgba(0, 0, 0, 0.9);
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #FF0033;
-    }
-    header {
-      position: relative;
-      height: 100vh;
-      background: url('https://images.unsplash.com/photo-1533058190801-20d4d76ac2b5?auto=format&fit=crop&w=1650&q=80') no-repeat center/cover;
-      background-attachment: fixed;
-    }
-    header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
-    }
-    .intro {
-      position: relative;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 20px;
-      text-shadow: 0 0 10px #FF0033;
-      animation: glitch 3s infinite;
-    }
-    @keyframes glitch {
-      0% { text-shadow: 0 0 10px #FF0033, 0 0 20px #FF0033; }
-      50% { text-shadow: 0 0 5px #FF0033, 2px 2px #fff; }
-      100% { text-shadow: 0 0 10px #FF0033, 0 0 20px #FF0033; }
-    }
-    .intro h1 {
-      font-size: 2.5rem;
-      color: #FF0033;
-      margin-bottom: .5em;
-    }
-    .intro p {
-      font-size: 1.2rem;
-      color: #fff;
-      margin-bottom: 1.5em;
-      max-width: 600px;
-    }
-    section {
-      padding: 80px 20px;
-      text-align: center;
-      position: relative;
-    }
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-    .feature {
-      background: #111;
-      padding: 30px;
-      width: 300px;
-      border: 2px solid #FF0033;
-      box-shadow: 0 0 20px rgba(255,0,51,0.8), inset 0 0 15px rgba(255,0,51,0.5);
-      border-radius: 8px;
-      transition: box-shadow .3s, transform .3s;
-    }
-    .feature:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 30px rgba(255,0,51,1), inset 0 0 20px rgba(255,0,51,0.7);
-    }
-    .feature h3 {
-      color: #FF0033;
-      margin-bottom: 10px;
-    }
-    .feature p {
-      color: #ddd;
-    }
-    .carousel {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      margin: 40px auto;
-      overflow: hidden;
-      height: 400px;
-      border: 3px solid #FF0033;
-      border-radius: 12px;
-      box-shadow: 0 0 25px rgba(255,0,51,0.7), inset 0 0 10px rgba(255,0,51,0.3);
-    }
-    .carousel img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    .carousel img.active {
-      opacity: 1;
-      position: relative;
-    }
-    footer {
-      padding: 30px 20px;
-      background: #000;
-      text-align: center;
-      color: #bbb;
-    }
-    footer a {
-      color: #FF0033;
-      margin: 0 12px;
-      text-decoration: none;
-    }
-    @media (max-width: 768px) {
-      .intro h1 { font-size: 2rem; }
-      .intro p { font-size: 1rem; }
-      nav { flex-direction: column; text-align: center; }
-      nav a { display: block; margin: 10px 0; }
-      section { padding: 60px 15px; }
-      .feature { width: 100%; max-width: 90%; margin: 0 auto; }
-      .carousel { height: auto; aspect-ratio: 2/1; }
-    }
-  </style>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=PT+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="css/font-icons.css">
+
+	<!-- SLIDER REVOLUTION 5.x CSS SETTINGS -->
+	<link rel="stylesheet" href="include/rs-plugin/css/settings.css" media="screen">
+	<link rel="stylesheet" href="include/rs-plugin/css/layers.css">
+	<link rel="stylesheet" href="include/rs-plugin/css/navigation.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Blank Page | Canvas</title>
+
+
+	<style>
+		#rev_slider_52_1_wrapper .tp-loader.spinner3 { background-color: #FFFFFF !important; }
+
+		.blurslider-gradient {
+			background:-webkit-linear-gradient(left,#ff557c 0%,#f3823c 100%);
+			-webkit-background-clip:text;
+			-webkit-text-fill-color:transparent;
+		}
+
+		.tp-opacity { opacity:0.85; }
+	</style>
 </head>
-<body>
-  <nav>
-    <div><strong>PRYMT</strong></div>
-    <div>
-      <a href="#features">Features</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#install">Installation</a>
-      <a href="#footer">Contact</a>
-    </div>
-  </nav>
 
-  <header>
-    <div class="intro">
-      <h1>💢 Forging Statement in Every Bike.</h1>
-      <p>⚡️ Own the road. Be seen. Be feared. High‑impact DRLs for riders who lead, not follow.</p>
-    </div>
-  </header>
+<body class="stretched">
 
-  <div class="section-divider1"></div>
-  <section id="features">
-    <h2>🔥 Why Prymt DRLs?</h2>
-    <div class="features">
-      <div class="feature">
-        <h3>Neon‑Bright Illumination</h3>
-        <p>Cut through night and rain with piercing LED beam intensity.</p>
-      </div>
-      <div class="feature">
-        <h3>Cyberpunk Design</h3>
-        <p>Sleek, angular DRLs—straight out of a mech‑city skyline.</p>
-      </div>
-      <div class="feature">
-        <h3>Plug‑&‑Play Install</h3>
-        <p>Easy fit to major bike models. No rewiring—just ride.</p>
-      </div>
-    </div>
-  </section>
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+		
 
-  <div class="section-divider"></div>
-  <section id="gallery">
-    <h2>🌆 Product Gallery</h2>
-    <div class="carousel">
-      <img src="https://placehold.co/800x400?text=DRL+Model+1" class="active">
-      <img src="https://placehold.co/800x400?text=DRL+Model+2">
-      <img src="https://placehold.co/800x400?text=DRL+Model+3">
-      <img src="https://placehold.co/800x400?text=DRL+Model+4">
-      <img src="https://placehold.co/800x400?text=DRL+Model+5">
-      <img src="https://placehold.co/800x400?text=DRL+Model+6">
-    </div>
-  </section>
-  <div class="section-divider1"></div>
-  <section id="install">
-    <h2>🔧 Installation Showcase</h2>
-    <p>See how our DRLs look in action on real bikes.</p>
-    <div class="carousel">
-      <img src="https://placehold.co/800x400?text=Installed+View+1" class="active">
-      <img src="https://placehold.co/800x400?text=Installed+View+2">
-      <img src="https://placehold.co/800x400?text=Installed+View+3">
-    </div>
-  </section>
+		<!-- Header
+		============================================= -->
+		
+		<section id="slider" class="slider-element revslider-wrap h-auto include-header">
 
-  <div class="section-divider"></div>
-  <footer id="footer">
-    <p>&copy; 2025 Prymt PH — Ride the Future.</p>
-    <p>
-      <a href="https://www.facebook.com/nihonhelmetph" target="_blank">Facebook</a> |
-      <a href="#" target="_blank">Instagram</a>
-    </p>
-  </footer>
+			<div class="rev_slider_wrapper" style="background:#aaa;padding:0px;">
+				<div id="rev_slider_52_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="mountain-parallax-header" data-source="gallery" style="background:rgba(255,255,255,0);padding:0px;">
+					<!-- START REVOLUTION SLIDER 5.4.3.1 fullscreen mode -->
+					<div id="rev_slider_52_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.3.1">
+						<ul><!-- SLIDE  -->
+							<li data-index="rs-126" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+								<!-- MAIN IMAGE -->
+								<img src="include/rs-plugin/demos/assets/images/mountainscene.jpg"  alt="Image"  data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Power4.easeOut" data-scalestart="150" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="20" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<!-- LAYERS -->
 
-  <script>
-    function rotateCarousel(carouselSelector) {
-      const carousel = document.querySelector(carouselSelector);
-      const slides = carousel.querySelectorAll('img');
-      let index = 0;
-      setInterval(() => {
-        slides[index].classList.remove('active');
-        index = (index + 1) % slides.length;
-        slides[index].classList.add('active');
-      }, 4000);
-    }
+								<!-- LAYER NR. 1 -->
+								<div class="tp-caption   tp-resizeme  blurslider-gradient rs-parallaxlevel-14"
+									 id="slide-126-layer-2"
+									  data-x="['center','center','center','center']" data-hoffset="['1','1','1','1']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['-239','-239','-189','-149']"
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
 
-    rotateCarousel("#gallery .carousel");
-    rotateCarousel("#install .carousel");
-  </script>
+									data-type="image"
+									data-responsive_offset="on"
+
+									data-frames='[{"delay":50,"speed":3000,"frame":"0","from":"sX:0.7;sY:0.7;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['inherit','inherit','inherit','inherit']"
+									data-paddingtop="[0,0,0,0]"
+									data-paddingright="[0,0,0,0]"
+									data-paddingbottom="[0,0,0,0]"
+									data-paddingleft="[0,0,0,0]"
+
+									style="z-index: 6;"><img src="include/rs-plugin/demos/assets/images/logo.png" alt="Image" data-ww="['1600px','1600px','861','689px']" data-hh="['385px','385px','207px','166px']" data-no-retina></div>
+
+								<!-- LAYER NR. 2 -->
+								<div class="tp-caption   tp-resizeme"
+									 id="slide-126-layer-1"
+									 data-x="['center','center','center','center']" data-hoffset="['-50','-50','-50','-50']"
+									 data-y="['middle','middle','middle','middle']" data-voffset="['130','130','130','80']"
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+
+									data-type="image"
+									data-responsive_offset="on"
+
+									data-frames='[{"delay":50,"speed":3000,"frame":"0","from":"sX:0.7;sY:0.7;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['inherit','inherit','inherit','inherit']"
+									data-paddingtop="[0,0,0,0]"
+									data-paddingright="[0,0,0,0]"
+									data-paddingbottom="[0,0,0,0]"
+									data-paddingleft="[0,0,0,0]"
+
+									style="z-index: 6;"><img src="include/rs-plugin/demos/assets/images/mountainpng-1.png" alt="Image" data-ww="['1050px','1050px','861','689px']" data-hh="['610px','610px','500px','400px']" data-no-retina> </div>
+
+								<!-- LAYER NR. 3 -->
+								<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme"
+									 id="slide-126-layer-10"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['0','0','0','0']"
+												data-width="full"
+									data-height="200"
+									data-whitespace="nowrap"
+
+									data-type="shape"
+									data-basealign="slide"
+									data-responsive_offset="on"
+
+									data-frames='[{"delay":50,"speed":1000,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['inherit','inherit','inherit','inherit']"
+									data-paddingtop="[0,0,0,0]"
+									data-paddingright="[0,0,0,0]"
+									data-paddingbottom="[0,0,0,0]"
+									data-paddingleft="[0,0,0,0]"
+
+									style="z-index: 7;background:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);"> </div>
+
+								<!-- LAYER NR. 4 -->
+								<div class="tp-caption   tp-resizeme"
+									 id="slide-126-layer-4"
+									 data-x="['left','left','left','left']" data-hoffset="['100','100','100','100']"
+									 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['10','10','10','10']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+
+									data-type="image"
+									data-basealign="slide"
+									data-responsive_offset="on"
+
+									data-frames='[{"delay":300,"speed":2000,"frame":"0","from":"y:100px;sX:1.1;sY:1.1;opacity:0;fb:10px;","to":"o:1;rY:180;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['inherit','inherit','inherit','inherit']"
+									data-paddingtop="[0,0,0,0]"
+									data-paddingright="[0,0,0,0]"
+									data-paddingbottom="[0,0,0,0]"
+									data-paddingleft="[0,0,0,0]"
+
+									style="z-index: 8;">
+						<div class="rs-looped rs-slideloop"  data-easing="Linear.easeNone" data-speed="40" data-xs="0" data-xe="500" data-ys="0" data-ye="0"><img src="include/rs-plugin/demos/assets/images/cloud1.png" alt="Image" data-ww="['500px','500px','500px','500px']" data-hh="['273px','273px','273px','273px']" data-no-retina> </div></div>
+
+								<!-- LAYER NR. 5 -->
+								<div class="tp-caption   tp-resizeme"
+									 id="slide-126-layer-5"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['10','10','10','10']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+
+									data-type="image"
+									data-basealign="slide"
+									data-responsive_offset="on"
+
+									data-frames='[{"delay":300,"speed":2000,"frame":"0","from":"sX:1.1;sY:1.1;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['inherit','inherit','inherit','inherit']"
+									data-paddingtop="[0,0,0,0]"
+									data-paddingright="[0,0,0,0]"
+									data-paddingbottom="[0,0,0,0]"
+									data-paddingleft="[0,0,0,0]"
+
+									style="z-index: 9;">
+						<div class="rs-looped rs-slideloop"  data-easing="Linear.easeNone" data-speed="100" data-xs="0" data-xe="500" data-ys="0" data-ye="0"><img src="include/rs-plugin/demos/assets/images/cloud2.png" alt="Image" data-ww="['500px','500px','500px','500px']" data-hh="['273px','273px','273px','273px']" data-no-retina> </div></div>
+
+								<!-- LAYER NR. 6 -->
+								<div class="tp-caption   tp-resizeme"
+									 id="slide-126-layer-6"
+									 data-x="['right','right','right','right']" data-hoffset="['150','150','150','150']"
+									 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['10','10','10','10']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+
+									data-type="image"
+									data-basealign="slide"
+									data-responsive_offset="on"
+
+									data-frames='[{"delay":300,"speed":2000,"frame":"0","from":"sX:1.1;sY:1.1;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['inherit','inherit','inherit','inherit']"
+									data-paddingtop="[0,0,0,0]"
+									data-paddingright="[0,0,0,0]"
+									data-paddingbottom="[0,0,0,0]"
+									data-paddingleft="[0,0,0,0]"
+
+									style="z-index: 10;">
+						<div class="rs-looped rs-slideloop"  data-easing="Linear.easeNone" data-speed="120" data-xs="0" data-xe="500" data-ys="0" data-ye="0"><img src="include/rs-plugin/demos/assets/images/cloud3.png" alt="Image" data-ww="['500px','500px','500px','500px']" data-hh="['273px','273px','273px','273px']" data-no-retina> </div></div>
+
+								<!-- LAYER NR. 7 -->
+								<div class="tp-caption   tp-resizeme"
+									 id="slide-126-layer-11"
+									 data-x="['left','left','left','left']" data-hoffset="['-200','-200','-200','-200']"
+									 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['10','10','10','10']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+
+									data-type="image"
+									data-basealign="slide"
+									data-responsive_offset="on"
+
+									data-frames='[{"delay":300,"speed":2000,"frame":"0","from":"sX:1.1;sY:1.1;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['inherit','inherit','inherit','inherit']"
+									data-paddingtop="[0,0,0,0]"
+									data-paddingright="[0,0,0,0]"
+									data-paddingbottom="[0,0,0,0]"
+									data-paddingleft="[0,0,0,0]"
+
+									style="z-index: 11;">
+						<div class="rs-looped rs-slideloop"  data-easing="Linear.easeNone" data-speed="80" data-xs="0" data-xe="500" data-ys="0" data-ye="0"><img src="include/rs-plugin/demos/assets/images/cloud3.png" alt="Image" data-ww="['500px','500px','500px','500px']" data-hh="['273px','273px','273px','273px']" data-no-retina> </div></div>
+
+								<!-- LAYER NR. 8 -->
+								<div class="tp-caption   tp-resizeme"
+									 id="slide-126-layer-12"
+									 data-x="['right','right','right','right']" data-hoffset="['-200','-200','-200','-200']"
+									 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['10','10','10','10']"
+												data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+
+									data-type="image"
+									data-basealign="slide"
+									data-responsive_offset="on"
+
+									data-frames='[{"delay":300,"speed":2000,"frame":"0","from":"y:100px;sX:1.1;sY:1.1;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['inherit','inherit','inherit','inherit']"
+									data-paddingtop="[0,0,0,0]"
+									data-paddingright="[0,0,0,0]"
+									data-paddingbottom="[0,0,0,0]"
+									data-paddingleft="[0,0,0,0]"
+
+									style="z-index: 12;">
+						<div class="rs-looped rs-slideloop"  data-easing="Linear.easeNone" data-speed="200" data-xs="0" data-xe="500" data-ys="0" data-ye="0"><img src="include/rs-plugin/demos/assets/images/cloud1.png" alt="Image" data-ww="['500px','500px','500px','500px']" data-hh="['273px','273px','273px','273px']" data-no-retina> </div></div>
+
+								
+
+								<!-- LAYER NR. 10 -->
+								<div class="tp-caption   tp-resizeme"
+									 id="slide-126-layer-8"
+									 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+									 data-y="['bottom','bottom','bottom','bottom']" data-voffset="['50','30','30','30']"
+												data-width="['none','640','480','360']"
+									data-height="none"
+									data-whitespace="['nowrap','normal','normal','normal']"
+
+									data-type="text"
+									data-responsive_offset="on"
+
+									data-frames='[{"delay":600,"speed":1000,"frame":"0","from":"y:50px;rX:90deg;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+									data-textAlign="['center','center','center','center']"
+									data-paddingtop="[0,0,0,0]"
+									data-paddingright="[10,10,10,10]"
+									data-paddingbottom="[0,0,0,0]"
+									data-paddingleft="[20,20,20,20]"
+
+									style="z-index: 14; white-space: nowrap; font-size: 15px; line-height: 20px; font-weight: 600; color: #ffffff; letter-spacing: 10px;font-family:helvetica;text-transform:uppercase;">Own the road. Be seen. Be feared.  </div>
+							</li>
+						</ul>
+						<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+				<div class="container text-center">
+
+					<div class="heading-block text-center">
+						<h1>This is a Blank Page</h1>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, ratione?</span>
+					</div>
+
+					<p>Quod aut totam adipisci fugit dolor tempora quasi odit, qui aliquam fuga voluptatibus quas eos earum facilis corporis quibusdam eius! Molestiae dolorum nisi quod aperiam ullam libero qui autem alias laborum totam voluptatibus aliquam commodi nobis ipsum excepturi repellendus nihil labore est possimus magni aliquid, sed culpa ad explicabo! Esse, provident, autem.</p>
+
+					<a href="index.html" class="btn btn-secondary mt-4">&lArr; Back to the Demo</a>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+	<script src="js/functions.js"></script>
+
+	<!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+	<script src="include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+	<script src="include/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+	<script src="include/rs-plugin/js/addons/revolution.addon.slicey.min.js"></script>
+
+	<script src="include/rs-plugin/js/extensions/revolution.extension.actions.min.js"></script>
+	<script src="include/rs-plugin/js/extensions/revolution.extension.carousel.min.js"></script>
+	<script src="include/rs-plugin/js/extensions/revolution.extension.kenburn.min.js"></script>
+	<script src="include/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script src="include/rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
+	<script src="include/rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script src="include/rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
+	<script src="include/rs-plugin/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script src="include/rs-plugin/js/extensions/revolution.extension.video.min.js"></script>
+
+	<!-- ADD-ONS JS FILES -->
+
+	<script>
+		var revapi52,
+		tpj=jQuery;
+
+		tpj(document).ready(function() {
+			if(tpj("#rev_slider_52_1").revolution == undefined){
+				revslider_showDoubleJqueryError("#rev_slider_52_1");
+			}else{
+				revapi52 = tpj("#rev_slider_52_1").show().revolution({
+					sliderType:"hero",
+					jsFileLocation:"include/rs-plugin/js/",
+					sliderLayout:"fullscreen",
+					dottedOverlay:"none",
+					delay:9000,
+					navigation: {
+					},
+					responsiveLevels:[1240,1024,778,480],
+					visibilityLevels:[1240,1024,778,480],
+					gridwidth:[1240,1024,778,480],
+					gridheight:[1000,768,960,720],
+					lazyType:"none",
+					parallax: {
+						type:"scroll",
+						origo:"slidercenter",
+						speed:400,
+						levels:[1,2,3,4,5,6,7,8,9,10,15,48,49,50,51,55],
+					},
+					shadow:0,
+					spinner:"spinner3",
+					autoHeight:"off",
+					fullScreenAutoWidth:"off",
+					fullScreenAlignForce:"off",
+					fullScreenOffsetContainer: "",
+					fullScreenOffset: "0px",
+					disableProgressBar:"on",
+					hideThumbsOnMobile:"off",
+					hideSliderAtLimit:0,
+					hideCaptionAtLimit:0,
+					hideAllCaptionAtLilmit:0,
+					debugMode:false,
+					fallbacks: {
+						simplifyAll:"off",
+						disableFocusListener:false,
+					}
+				});
+			}
+		});	/*ready*/
+	</script>
+
 </body>
 </html>

@@ -12284,7 +12284,11 @@ textarea.form-control-lg {
   }
 }
 :root {
+<<<<<<< HEAD
   --cnvs-themecolor:	#ff0000;
+=======
+  --cnvs-themecolor:	#FF0000;
+>>>>>>> 26621ab4cbed2f838f436584684531d9cbb9508f
   --cnvs-themecolor-rgb:	255, 0, 0;
   --bs-link-color:	var(--cnvs-themecolor);
   --bs-link-color-rgb:	var(--cnvs-themecolor-rgb);
